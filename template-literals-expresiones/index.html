@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Literals - Expresiones</title>
+</head>
+
+<body>
+    <script>
+        const nombre = 'Anibal'
+        console.log(`Mi nombre es ${nombre}`)
+        console.log(`Mi nombre es ${29 + 5}`)
+        console.log(`Este es el ${'Curso de Javascript para React'}`)
+        console.log(`Mi nombre es ${x = 'Alter'}`)
+
+        // Auto ejecutar una función de JS envolviendo entre paréntesis y colocando () para ejecutarlo
+        console.log(`Mi nombre es ${(function name() {
+            return 'Alt';
+        })()}`)
+        console.log(`Mi nombre es ${(() => {
+            return 'Alt Arrow';
+        })()}`)
+
+        //Condiciones
+        console.log(`Mi nombre es ${true ? 'Alt ternario' : ''}`)
+        console.log(`Mi nombre es ${false ? 'Alt true' : 'false'}`)
+
+        //Listas
+        console.log(`Mi nombre es ${['a', 'b'].map(letra => `${letra}--styled`)}`)
+    </script>
+
+</body>
+
+</html>
