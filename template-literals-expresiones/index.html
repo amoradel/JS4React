@@ -9,6 +9,14 @@
 
 <body>
     <script>
+        const saludo = 'Hola, \n mi nombre es Anibal';
+        const saludo1 = `Hola, 
+                        mi nombre es Anibal`;
+        //backtick ``
+
+        console.log(saludo);
+        console.log(saludo1);
+
         const nombre = 'Anibal'
         console.log(`Mi nombre es ${nombre}`)
         console.log(`Mi nombre es ${29 + 5}`)
@@ -29,6 +37,13 @@
 
         //Listas
         console.log(`Mi nombre es ${['a', 'b'].map(letra => `${letra}--styled`)}`)
+
+        //Tagged template
+        function userTemplate(strings, value) {
+            return `<p>${strings[0]}<strong>${value}</strong></p>`
+        }
+
+        userTemplate `username: ${'Anibal'}`
     </script>
 
 </body>
