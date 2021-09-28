@@ -1,51 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Template Literals - Expresiones</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-        const saludo = 'Hola, \n mi nombre es Anibal';
-        const saludo1 = `Hola, 
-                        mi nombre es Anibal`;
-        //backtick ``
+      const saludo = "Hola, \n mi nombre es Anibal";
+      const saludo1 = `Hola, 
+      mi nombre es Anibal`;
 
-        console.log(saludo);
-        console.log(saludo1);
+      //backtick ``
+      console.log(saludo);
+      console.log(saludo1);
 
-        const nombre = 'Anibal'
-        console.log(`Mi nombre es ${nombre}`)
-        console.log(`Mi nombre es ${29 + 5}`)
-        console.log(`Este es el ${'Curso de Javascript para React'}`)
-        console.log(`Mi nombre es ${x = 'Alter'}`)
+      const nombre = "Anibal";
+      console.log(`Mi nombre es ${nombre}`);
+      console.log(`Mi nombre es ${29 + 5}`);
+      console.log(`Este es el ${"Curso de Javascript para React"}`);
+      console.log(`Mi nombre es ${(x = "Alter")}`);
 
-        // Auto ejecutar una función de JS envolviendo entre paréntesis y colocando () para ejecutarlo
-        console.log(`Mi nombre es ${(function name() {
-            return 'Alt';
-        })()}`)
-        console.log(`Mi nombre es ${(() => {
-            return 'Alt Arrow';
-        })()}`)
+      // Auto ejecutar una función de JS envolviendo entre paréntesis y colocando () para ejecutarlo
+      console.log(
+        `Mi nombre es ${(function name() {
+          return "Altersinho";
+        })()}`
+      );
 
-        //Condiciones
-        console.log(`Mi nombre es ${true ? 'Alt ternario' : ''}`)
-        console.log(`Mi nombre es ${false ? 'Alt true' : 'false'}`)
+      console.log(
+        `Mi nombre es ${(() => {
+          return "Altersinho Arrow";
+        })()}`
+      );
 
-        //Listas
-        console.log(`Mi nombre es ${['a', 'b'].map(letra => `${letra}--styled`)}`)
+      //Condiciones ternarios
+      console.log(`Mi nombre es ${true && "Altersinho ternario"}`);
+      console.log(`Mi nombre es ${false ? "Alter true" : "Alter false"}`);
 
-        //Tagged template
-        function userTemplate(strings, value) {
-            return `<p>${strings[0]}<strong>${value}</strong></p>`
-        }
+      //Listas
+      console.log(
+        `Mi nombre es ${["a", "b"].map((letra) => `${letra}--styled`)}`
+      );
 
-        userTemplate `username: ${'Anibal'}`
+      //Tagged template
+      function userTemplate(strings, value) {
+        return `<p>${strings[0]}<strong>${value}</strong></p>`;
+      }
+
+      userTemplate`username: ${"Anibal"}`;
     </script>
-
-</body>
-
+  </body>
 </html>
